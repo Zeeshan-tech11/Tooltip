@@ -3,7 +3,7 @@ import { VscTriangleDown, VscTriangleRight,VscTriangleLeft,VscTriangleUp} from '
 
 
 function ToolTip({children,position}) {
-  let[Position,setPosition]=useState(null)
+  let[Position,setPosition]=useState(null)// set position on mouse enter and null when mouse leaves
   console.log(position);
   return (
     <div onMouseEnter={()=>setPosition(position)} onMouseLeave={()=>setPosition(null)}>
@@ -54,7 +54,7 @@ function ToolTip({children,position}) {
       </div>      </div>
       </div>
       </>
-      :
+      :   // if position is not speciefied then show it whithout tooltip components
       <div>{children}</div>
       }
       </div>
